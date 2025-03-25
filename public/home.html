@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./home.css">
-        <title>Home Vanilla</title>
+        <title>Velozes e Furiosos 5</title>
+        <link rel="stylesheet" href="home.css">
     </head>
+
     <body>
-        <h1>Bem-vindo à Página Home</h1>
-        <p>Esta é uma página HTML pura dentro do projeto React.</p>
-        <a href="/login">Login</a>
+        <header class="header">
+            <div class="container-header">
+                <img class="logo" src="./assets/logos/vef5.png" alt="Logo">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#presentation">Apresentação</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#">Elenco</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="presentation" class="section">
+            <div class="container-presentation">
+                <div class="presentation-top">
+                    <div class="cover">
+                        <img src="./assets/capa.jpg" alt="Cover">
+                        <img class="img-cover-2" src="./assets/capa2.jpg" alt="Cover">
+                        <div class="text-cover">
+                            <p>Velocidade, ação e adrenalina tomam conta do Rio de Janeiro! Dominic Toretto (Vin Diesel) e Brian O'Conner (Paul Walker) estão de volta, reunindo um time lendário para o maior golpe de suas vidas. Enquanto fogem das autoridades e enfrentam um poderoso inimigo, eles precisam confiar na velocidade, na habilidade e na família para sobreviver. Com perseguições eletrizantes, carros alucinantes e cenas de tirar o fôlego, Velozes e Furiosos 5 eleva a franquia a um novo nível.</p>
+                            <span>Você está pronto para acelerar?</span>
+                        </div>
+                    </div>
+                    <img class="img-toretto" src="./assets/toretto.png" alt="Cover">
+                    <div class="trailer">
+                        <iframe src="https://www.youtube.com/embed/e4tEwEZYELc" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="presentation-bottom">
+                    <div class="text-description">
+                        <h1>Velozes e Furiosos 5: Operação Rio</h1>
+                        <h2>2h 10min | Ação, Suspense</h2>
+                        <p>6 de maio de 2011</p>
+                        
+                        <div class="gtr">
+                            <img src="./assets/gtr.png" alt="GTR-35">
+                            <span>Utilizado por Brian O'Conner</span>
+                        </div>
+                    </div>  
+
+                    <div class="where-watch">
+                        <h2>Onde Assistir?</h2>
+                        <div class="platforms">
+                            <div class="telecine">
+                                <img src="./assets/logos/telecine.png" alt="Telecine">
+                                <a target="_blank" href="https://globoplay.globo.com/velozes-furiosos-5-operacao-rio/t/f6NVtbgRPP/">Por assinatura</a>
+                            </div>
+                            <div class="amazon-prime">
+                                <img src="./assets/logos/amazon.png" alt="Amazon Prime">
+                                <a target="_blank" href="https://www.primevideo.com/detail/amzn1.dv.gti.3e142c1e-2bce-4198-897e-7430f5be2ad5?irclickid=b88e991aN09bc11f0bb3005f0114ea78&ref=dvm_ass_acm_xx_mf_s_imp_b88e991aN09bc11f0bb3005f0114ea78&irgwc=1">Por assinatura</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="about" class="section">
+            <div class="container-about">
+                <h2>Sinopse</h2>
+                <p>Dominic Toretto e Brian O'Conner reúnem um time de elite no Rio de Janeiro para realizar um grande assalto enquanto são perseguidos por um agente federal implacável.</p>
+                
+                <a href="#" class="button">Saiba Mais</a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
