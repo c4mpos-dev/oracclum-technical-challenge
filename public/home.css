@@ -62,7 +62,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid #cf1e11;
+    border-bottom: 1px dashed #cf1e11;
 }
 
 /* MAIN COVER SECTION */
@@ -429,6 +429,10 @@ body {
     border-right: 1px solid #cf1e11;
     border-top: 1px solid #cf1e11;
     box-shadow: inset 10px 0px 10px -10px #00000080, inset -10px 0px 10px -10px #00000080;
+
+    /* Firefox */
+    scrollbar-color: #cf1e11 #000;
+    scrollbar-width: thin; 
 }
 
 .container-carousel::-webkit-scrollbar {
@@ -448,12 +452,6 @@ body {
 
 .container-carousel::-webkit-scrollbar-thumb:hover {
     background: #a8180e;
-}
-
-/* Firefox */
-#carousel-container {
-    scrollbar-color: #cf1e11 #000;
-    scrollbar-width: thin; 
 }
 
 .carousel {
