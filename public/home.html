@@ -19,7 +19,7 @@
                     <a href="#about" onclick="smoothScroll('#about'); changeTitle('Sobre')">Sobre</a>
                     <a href="#curiosities" onclick="smoothScroll('#curiosities'); changeTitle('Curiosidades')">Curiosidades</a>
                     <a href="#cast" onclick="smoothScroll('#cast'); changeTitle('Elenco')">Elenco</a>
-                    <a href="#questions" onclick="smoothScroll('#questions'); changeTitle('Perguntas')">Perguntas</a>
+                    <a href="#question" onclick="smoothScroll('#question'); changeTitle('Pergunta')">Enviar pergunta</a>
                 </nav>
             </div>
         </header>
@@ -240,11 +240,41 @@
             </div>
         </div>
 
-        <div id="questions">
-            <div class="container-questions">
-                <h1>PERGUNTAS</h1>
+        <div id="question">
+            <div class="container-question">
+                <div class="question-title">
+                    <h1>- Faça sua pergunta -</h1>
+                    <p>Pergunte algo sobre o filme</p>
+                </div>
+                <textarea type="text" id="question-content" placeholder="Digite sua pergunta..."></textarea>
+                <button class="buttons-questions" onclick="enviarPergunta()">
+                    Enviar
+                    <img src="./assets/interface/send.svg">
+                </button>
+                <button class="buttons-questions button-view-questions">
+                    Visualizar perguntas
+                    <img src="./assets/interface/eye.svg">
+                </button>
             </div>
         </div>
+
+        <footer class="footer">
+            <div class="text-footer">
+                <h2>Feito por <a href="https://github.com/c4mpos-dev">Cauã Campos</a></h2>
+                <p>Copyright © 2025 - Todos os direitos reservados</p>
+            </div>
+            <div class="icons-footer">
+                <a  href="https://github.com/c4mpos-dev" target="_blank">
+                    <img src="assets/logos/logos--github-icon.svg">
+                </a>
+                <a  href="https://www.instagram.com/c4mp02/" target="_blank">
+                    <img src="assets/logos/logos--instagram-icon.svg">
+                </a>
+                <a  href="https://www.linkedin.com/in/cau%C3%A3-campos/" target="_blank">
+                    <img src="assets/logos/logos--linkedin-icon.svg">
+                </a>  
+            </div>
+        </footer>
         
         <script src="home.js"></script>
     </body>
