@@ -62,8 +62,9 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-bottom: 1px dashed #cf1e11;
+    border-bottom: 1px solid #cf1e11;
 }
+
 
 /* MAIN COVER SECTION */
 
@@ -141,6 +142,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px dashed #cf1e11;
 }
 
 .container-presentation {
@@ -149,6 +153,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .presentation-top {
@@ -162,8 +168,6 @@ body {
 .cover {
     display: flex;
     align-items: center;
-    width: 700px;
-    margin-left: 50px;
     padding: 20px 30px 20px 30px;
     background: #0f0f0f;
     border: 1px solid #cf1e11;
@@ -179,7 +183,7 @@ body {
 
 .img-cover-2 {
     margin-left: -180px;
-    opacity: 2%;
+    opacity: 5%;
     transition: all 0.3s ease-in-out;
 
     &:hover {
@@ -225,14 +229,26 @@ body {
     100% { transform: translateX(2px); }
 }
 
-.img-toretto {
+.img-toretto-brian {
     width: 320px;
     height: 440px;
-    margin: 0 -40px 0 -40px;
 
-    z-index: -1;
-    opacity: 15%;
+    opacity: 25%;
     box-shadow: 2px 2px 8px #ff0000, -2px -2px 8px #ff0000;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        opacity: 100%;
+    }
+}
+
+.img-toretto {
+    margin-right: 50px;
+}
+
+.img-brian {
+    margin-left: 50px;
 }
 
 .trailer {
@@ -240,7 +256,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-right: 50px;
+    margin-left: 50px;
 
     max-width: 800px;
 
@@ -263,7 +279,7 @@ body {
 .text-description {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-right: 50px;
     gap: 10px;
 
     h1 {
@@ -285,27 +301,6 @@ body {
 }
 
 .gtr {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-
-    img {
-        width: 400px;
-        margin: 0;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    span {
-        margin-top: -15px;
-    }
-}
-
-.dodge {
     display: flex;
     flex-direction: column;
     justify-content: center;
