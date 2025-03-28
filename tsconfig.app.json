@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "public/home.js"]
+  "include": ["src", "public/scripts/home.js"]
 }

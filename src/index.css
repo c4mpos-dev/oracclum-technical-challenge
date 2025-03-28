@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --color-base-red: #cf1e11;
+    --color-base-text: #FFF;
+    --color-base-background: #080808;
+    
+    --font-nunito: "Nunito", sans-serif;
+}
+
+body {
+    @apply bg-base-background font-nunito text-base-text
+}
