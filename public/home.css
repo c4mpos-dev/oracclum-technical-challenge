@@ -7,7 +7,7 @@ body {
 }
 
 #loading-screen {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -31,7 +31,7 @@ body {
 }
 
 #content {
-    display: none;
+    /* display: none; */
 }
 
 .header {
@@ -89,7 +89,6 @@ body {
     gap: 4px;
 
     a {
-        
         font-size: 0.9rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -334,7 +333,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-left: 50px;
 
     max-width: 800px;
 
@@ -407,72 +405,6 @@ body {
     }
 }
 
-.where-watch {
-    display: flex;
-    height: 280px;
-    margin-right: 50px;
-    background: #0f0f0f;
-    border: 1px solid #cf1e11;
-    border-radius: 10px;
-}
-
-.texts-where-watch {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cover-3 {
-    object-fit: cover;
-    opacity: 70%;
-    border-radius: 10px;
-}
-
-.platforms {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 15px;
-    gap: 10px;
-    padding: 10px 20px 10px 20px;
-
-    img {
-        border-radius: 10px;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-}
-
-.telecine {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    img {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-.amazon-prime {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    img {
-        width: 65px;
-        height: 60px;
-    }
-}
-
 
 
 /* CURIOSITIES SECTION */
@@ -506,6 +438,12 @@ body {
         font-size: 1.105rem;
         text-align: center;
     }
+}
+
+.container-card-geral {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container-cards {
@@ -815,4 +753,175 @@ body {
     align-items: center;
     margin-right: 50px;
     gap: 10px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1900px) {
+    .cover {
+        width: 700px;
+    }
+
+    .text-cover {
+        p {
+            font-size: 0.9rem;
+        }
+    
+        span {
+            font-size: 1rem;
+        }
+    }
+
+    @keyframes run {
+        from {
+            left: 0;
+        }
+        to {
+            left:70%; 
+        }
+    }
+
+    .container-cards {
+        grid-template-columns: repeat(5, 1fr);
+    } 
+
+    .container-carousel {
+        width: 1300px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .gtr > img {  
+        width: 250px; 
+    }
+
+    .container-carousel {
+        width: 1100px;
+    }
+
+    .container-cards {
+        grid-template-columns: repeat(4, 1fr);
+    } 
+}
+
+@media (max-width: 1500px) {
+    .text-cover {
+        span {
+            margin-top: 30px;
+        }
+    }
+
+    .img-toretto-brian {
+        width: 300px;
+        height: 440px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .text-cover {
+        p {
+            font-size: 0.8rem;
+        }
+    
+        span {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .cover {
+        width: 400px;
+        justify-content: center;
+    }
+
+    .text-cover {
+        display: none;
+    }
+
+    .container-cards {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+}
+
+@media (max-width: 1300px) {
+    .container-carousel {
+        width: 900px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .menu > a {
+        font-size: 0.7rem;
+    }
+
+    .cover {
+        width: 350px;
+    }
+
+    .gtr {
+        display: none;
+    }
+
+    .img-toretto-brian {
+        width: 270px;
+        height: 440px;
+    }
+}
+
+@media (max-width: 990px) {
+    .menu > a {
+        font-size: 0.7rem;
+    }
+
+    .cover {
+        width: 650px;
+    }
+
+    .text-cover {
+        display: flex;
+    }
+
+    .img-toretto-brian {
+
+        display: none;
+    }
+
+    .trailer {
+        width: 712px;
+    }
+
+    .container-carousel {
+        width: 700px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container-logout > span {
+        display: none;
+    }
+
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media (max-width: 800px) {
+    .cover {
+        width: 350px;
+    }
+
+    .text-cover {
+        display: none;
+    }
+
+    .container-carousel {
+        width: 500px;
+    }
+
+    .container-question > textarea {
+        width: 500px;
+    }
 }
