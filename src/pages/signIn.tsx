@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
@@ -8,6 +9,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../services/firebaseConfig";
 
 import { Loading } from "../components/Loading";
+import { useAuth } from "../hooks/useAuth";
 
 const signInSchema = z.object({
     email: z.string().email("E-mail inválido").min(1, "O e-mail é obrigatório"),
@@ -26,7 +28,7 @@ export function SignIn() {
         resolver: zodResolver(signInSchema)
     });
 
-    const [signInWithEmailAndPassword, user, loading] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, authUser, loading] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
 
     const onSubmit = async (data: FormData) => {
@@ -34,9 +36,17 @@ export function SignIn() {
         reset();
     };
 
+    const { user } = useAuth();
+
+    useEffect(() => {
+        if (user) {
+            navigate("/");
+        }
+    }, [user, navigate]);
+
     if (loading) return <Loading />;
 
-    if (user) {
+    if (authUser) {
         navigate("/");
     }
 

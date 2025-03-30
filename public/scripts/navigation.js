@@ -36,20 +36,3 @@ function changeTitle(section) {
         document.title = "Velozes & Furiosos | " + section;
     }
 }
-
-function enviarPergunta() {
-    let question = document.getElementById("question-content").value.trim();
-    let message = document.getElementById("message");
-
-    if (!question) {
-        console.log("Por favor, digite uma pergunta.");
-        // message.innerText = "Por favor, digite uma pergunta.";
-        return;
-    }
-
-    console.log("Pergunta enviada:", question);
-    // message.style.color = "green";
-    // message.innerText = "Pergunta enviada com sucesso!";
-
-    document.getElementById("question-content").value = "";
-}

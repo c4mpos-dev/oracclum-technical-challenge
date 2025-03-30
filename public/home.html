@@ -24,7 +24,7 @@
                     <div class="container-logo-logout">
                         <img class="logo" src="./assets/logos/vef5.png" alt="Logo" onclick="smoothScroll('#main-cover'); changeTitle('')">
                         <div class="container-logout">
-                            <span>Olá, Cauã Campos</span>
+                            <span>Olá, fã de velocidade!</span>
                             <img src="./assets/interface/logout.svg" alt="Sair" id="sign-out-btn">
                         </div>
                     </div>
@@ -33,6 +33,7 @@
                         <a href="#curiosities" onclick="smoothScroll('#curiosities'); changeTitle('Curiosidades')">Curiosidades</a>
                         <a href="#cast" onclick="smoothScroll('#cast'); changeTitle('Elenco')">Elenco</a>
                         <a href="#question" onclick="smoothScroll('#question'); changeTitle('Pergunta')">Enviar pergunta</a>
+                        <a href="/questions">PERGUNTAS</a>
                     </nav>
                 </div>
             </header>
@@ -257,17 +258,17 @@
                 <div class="container-question">
                     <div class="question-title">
                         <h1>- Faça sua pergunta -</h1>
-                        <p>Pergunte algo sobre o filme</p>
+                        <p>Tire sua dúvida com fãs da saga</p>
                     </div>
                     <textarea type="text" id="question-content" placeholder="Digite sua pergunta..."></textarea>
-                    <button class="buttons-questions" onclick="enviarPergunta()">
+                    <button class="buttons-questions" id="send-button" onclick="enviarPergunta()">
                         Enviar
                         <img src="./assets/interface/send.svg">
                     </button>
-                    <button class="buttons-questions button-view-questions">
+                    <a class="buttons-questions button-view-questions" id="view-questions" href="/questions" style="text-decoration: none;">
                         Visualizar perguntas
                         <img src="./assets/interface/eye.svg">
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -291,5 +292,6 @@
         </div>
         
         <script src="./scripts/navigation.js"></script>
+        <script src="./scripts/api.js"></script>
     </body>
 </html>
