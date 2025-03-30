@@ -756,7 +756,7 @@ body {
 }
 
 
-/* MOBILE */
+/* != screens */
 
 @media (max-width: 1900px) {
     .cover {

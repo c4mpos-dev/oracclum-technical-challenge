@@ -19,6 +19,7 @@ async function enviarPergunta() {
         });
 
         document.getElementById("question-content").value = "";
+        alert("Pergunta enviada!");
 
     } catch (error) {
         alert("Ocorreu um erro ao enviar a pergunta.");

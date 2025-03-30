@@ -34,14 +34,17 @@ export function Questions() {
         try {
             const response = await api.get("/search-questions");
             setQuestions(response.data); 
-            setIsLoading(false);
+            
         } catch (error) {
             console.error("Erro ao buscar perguntas:", error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
     useEffect(() => {
         fetchQuestions();
+        document.title = "Perguntas";
     }, []);
 
     const convertTimestamp = (timestamp: FirestoreTimestamp) => {
@@ -59,7 +62,7 @@ export function Questions() {
             {isLoading ? (
                 <Loading />
             ) : (
-                questions.length > 0 ? (
+                questions.length > 0 && questions ? (
                     <div className="flex flex-col justify-center items-center w-full bg-base-background">
                         <div className="flex flex-col mt-6 mb-6 gap-6">
                             {questions.map((question, index) => (
@@ -83,7 +86,7 @@ export function Questions() {
                 )
             )}
 
-            <footer className="flex justify-between items-center bg-[#350502] p-8">
+            <footer className="flex justify-between items-center bg-[#350502] p-8 mt-auto">
                 <div>
                     <h2 className="text-xl font-semibold">
                         Feito por{' '}

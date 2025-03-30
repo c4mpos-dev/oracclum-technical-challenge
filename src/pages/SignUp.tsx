@@ -32,6 +32,7 @@ export function SignUp() {
 
     const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
+    document.title = "Cadastro";
 
     const onSubmit = async (data: FormData) => {
         await createUserWithEmailAndPassword(data.email, data.password);

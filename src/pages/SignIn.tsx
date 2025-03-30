@@ -42,6 +42,7 @@ export function SignIn() {
         if (user) {
             navigate("/");
         }
+        document.title = "Login";
     }, [user, navigate]);
 
     if (loading) return <Loading />;
