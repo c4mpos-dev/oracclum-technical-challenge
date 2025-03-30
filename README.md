@@ -1,5 +1,11 @@
 # Projeto de Avaliação Técnica - Oracclum
 
+## Filme escolhido --> Velozes & Furiosos 5: Operação Rio
+
+<p align="center">
+  <img alt="Banner" title="Banner" src="./src/assets/template/banner.jpg"/>
+</p>
+
 Este repositório contém um projeto desenvolvido como parte de uma avaliação técnica. O projeto é composto por uma aplicação web construída com React + Vite e uma API Node.js utilizando Express e Firebase Firestore.
 
 ## Responsividade
