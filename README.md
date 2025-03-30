@@ -1,55 +1,56 @@
-# Oracclum-technical-challenge
-# React + TypeScript + Vite
+# Projeto de Avaliação Técnica - Oracclum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém um projeto desenvolvido como parte de uma avaliação técnica. O projeto é composto por uma aplicação web construída com React + Vite e uma API Node.js utilizando Express e Firebase Firestore.
 
-Currently, two official plugins are available:
+## Responsividade
+### Até (`800px`)
+Como o projeto não foi hospedado por ter React e páginas estáticas misturadas, a responsividade foi feita até 800px por só rodar em PC.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Estrutura do Projeto
 
-## Expanding the ESLint configuration
+### 1. Página de Propaganda (`public`)
+A pasta `public` contém uma página estática que não utiliza nenhum framework. Essa página não faz parte da aplicação React, porém faz parte das rotas protegidas (O que não faz sentido, mas esse projeto é para testes, e essa página vanilla era um requisito).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. Aplicativo React + Vite
+O restante do projeto foi desenvolvido utilizando **React** com **Vite**. As funcionalidades incluem:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Rotas protegidas para controle de acesso.
+- Integração com Firebase Authentication para autenticação de usuários.
+- Integração com uma API para gerenciamento de perguntas e respostas.
+
+### 3. API Node.js (pasta `api`)
+A API foi desenvolvida utilizando **Express.js** e armazena os dados no **Firebase Firestore**. Funcionalidades principais:
+
+- Criar perguntas.
+- Listar perguntas.
+- Adicionar respostas a perguntas existentes.
+
+## Como Rodar o Projeto Localmente
+
+### Requisitos:
+- Node.js instalado
+- Gerenciador de pacotes `npm` ou `yarn`
+
+### Passo a Passo:
+
+#### 1. Rodando a API
+```sh
+cd api
+npm install  # ou yarn install
+npm run dev  # Inicia a API localmente na porta 5000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+#### 2. Rodando o Frontend
+```sh
+npm install  # ou yarn install
+npm run dev  # Inicia a aplicação React localmente
 ```
+
+A aplicação estará disponível em `http://localhost:5173` (por padrão do Vite).
+
+## Considerações Finais
+Este projeto foi desenvolvido com foco em boas práticas de desenvolvimento, incluindo:
+- Uso de **Context API** para gerenciamento de autenticação.
+- Proteção de rotas baseada no estado de login do usuário.
+- Validação de formulários com `react-hook-form` e `zod`.
+- Integração eficiente com Firebase Firestore para armazenamento de perguntas e respostas.
