@@ -35,20 +35,20 @@ A API foi desenvolvida utilizando **Express.js** e armazena os dados no **Fireba
 
 ### Requisitos:
 - Node.js instalado
-- Gerenciador de pacotes `npm` ou `yarn`
+- Gerenciador de pacotes `npm`
 
 ### Passo a Passo:
 
 #### 1. Rodando a API
 ```sh
 cd api
-npm install  # ou yarn install
+npm install  
 npm run dev  # Inicia a API localmente na porta 5000
 ```
 
 #### 2. Rodando o Frontend
 ```sh
-npm install  # ou yarn install
+npm install  
 npm run dev  # Inicia a aplicação React localmente
 ```
 
