@@ -27,9 +27,9 @@ O restante do projeto foi desenvolvido utilizando **React** com **Vite**. As fun
 ### 3. API Node.js (pasta `api`)
 A API foi desenvolvida utilizando **Express.js** e armazena os dados no **Firebase Firestore**. Funcionalidades principais:
 
-- Criar perguntas.
-- Listar perguntas.
-- Adicionar respostas a perguntas existentes.
+- Criar perguntas. (/questions - POST)
+- Listar perguntas. (/questions - GET)
+- Adicionar respostas a perguntas existentes. (/questions/:id/answers - POST)
 
 ## Como Rodar o Projeto Localmente
 
